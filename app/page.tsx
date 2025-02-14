@@ -90,15 +90,15 @@ export default function Home() {
           )}
         </div>
         <div className="button-section">
-          <Link href='/success'>
+          {/* <Link href='/success'> */}
             <button
               className="yes-button button-base button-green"
-              onMouseOver={handleYesBtn} onMouseOut={handleYesBtn}
+              onMouseOver={handleYesBtn} onMouseOut={handleYesBtn} onClick={handleNoBtn}
               style={coordYes ? { position: 'absolute', top: coordYes.x, right: coordYes.y } : undefined}
             >
               {responseYes}
             </button>
-          </Link>
+          {/* </Link> */}
           <button className='no-button button-base button-red' style={coord ? { position: 'absolute', top: coord.x, right: coord.y } : undefined}
             onClick={handleNoBtn} onMouseOver={handleNoBtn}
           >{response}</button>
