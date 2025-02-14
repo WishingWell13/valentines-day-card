@@ -12,7 +12,10 @@ interface Coordinates {
 export default function Home() {
   const [image, setImage] = useState(false);
   const [coord, setCoords] = useState<Coordinates | null>(null);
+  const [coordYes, setYesCoords] = useState<Coordinates | null>(null);
+
   const [response, setResponse] = useState('No');
+  const [responseYes, setYesResponse] = useState('Yes');
 
   const handleNoBtn = () => {
     const x = Math.random() * 60;
@@ -33,8 +36,25 @@ export default function Home() {
     setResponse(phrases[randomIndex]);
   }
 
+
   const handleYesBtn = () => {
-    setImage(!image);
+    const x = Math.random() * 60;
+    const y = Math.random() * 60;
+
+    setYesCoords({ x: `${x}%`, y: `${y}%` });
+
+    const phrases = [
+      "????????",
+      "Raise your standards",
+      "I'm suprised you are seeing this",
+      "I'm not sure what you're doing",
+      "You're not supposed to be here",
+    ]
+
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    setYesResponse(phrases[randomIndex]);
+
+    // setImage(!image);
   }
 
   return (
@@ -56,8 +76,9 @@ export default function Home() {
             <button
               className="yes-button button-base button-green"
               onMouseOver={handleYesBtn} onMouseOut={handleYesBtn}
+              style={coordYes ? { position: 'absolute', top: coordYes.x, right: coordYes.y } : undefined}
             >
-              Yes
+              {responseYes}
             </button>
           </Link>
           <button className='no-button button-base button-red' style={coord ? { position: 'absolute', top: coord.x, right: coord.y } : undefined}
