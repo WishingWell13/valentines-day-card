@@ -45,7 +45,7 @@ export default function Home() {
 
     const phrases = [
       "❓????????❓",
-      "Raise your standards",
+      "⬆️ Raise your standards ⬆️",
       "I'm suprised you are seeing this 😧",
       "I'm not sure what you're doing 🤷",
       "You're not supposed to be here 🤷",
