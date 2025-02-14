@@ -44,11 +44,11 @@ export default function Home() {
     setYesCoords({ x: `${x}%`, y: `${y}%` });
 
     const phrases = [
-      "????????",
+      "❓????????❓",
       "Raise your standards",
-      "I'm suprised you are seeing this",
-      "I'm not sure what you're doing",
-      "You're not supposed to be here",
+      "I'm suprised you are seeing this 😧",
+      "I'm not sure what you're doing 🤷",
+      "You're not supposed to be here 🤷",
     ]
 
     const randomIndex = Math.floor(Math.random() * phrases.length);
