@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -16,6 +16,22 @@ export default function Home() {
 
   const [response, setResponse] = useState('No');
   const [responseYes, setYesResponse] = useState('Yes');
+
+  const timerId = useRef<NodeJS.Timeout | null>(null);
+
+    useEffect(() => {
+
+        //Creating a timeout
+        timerId.current = setTimeout(() => {
+            setYesResponse("Yes");
+        }, 5000);
+        
+
+        return () => {
+            //Clearing a timeout
+            timerId.current ? clearTimeout(timerId.current) : null;
+        };
+    }, [responseYes]);
 
   const handleNoBtn = () => {
     const x = Math.random() * 60;
