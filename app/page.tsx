@@ -66,6 +66,7 @@ export default function Home() {
       "I'm not sure what you're doing 🤷",
       "You're not supposed to be here 🤷",
       "You can do better than this 😂",
+      "Don't settle for less 🤨",
     ]
 
     const randomIndex = Math.floor(Math.random() * phrases.length);
