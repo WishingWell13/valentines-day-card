@@ -49,6 +49,7 @@ export default function Home() {
       "I'm suprised you are seeing this 😧",
       "I'm not sure what you're doing 🤷",
       "You're not supposed to be here 🤷",
+      "You can do better than this 😂",
     ]
 
     const randomIndex = Math.floor(Math.random() * phrases.length);
