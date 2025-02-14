@@ -93,7 +93,7 @@ export default function Home() {
           {/* <Link href='/success'> */}
             <button
               className="yes-button button-base button-green"
-              onMouseOver={handleYesBtn} onMouseOut={handleYesBtn} onClick={handleNoBtn}
+              onMouseOver={handleYesBtn} onMouseOut={handleYesBtn} onClick={handleYesBtn}
               style={coordYes ? { position: 'absolute', top: coordYes.x, right: coordYes.y } : undefined}
             >
               {responseYes}
